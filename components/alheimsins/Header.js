@@ -4,8 +4,8 @@ export default ({ user, info }) => (
   <header>
     <nav>
       <div className='links-container'>
-        <Link href='/' activeClassName='active'><a>HOME</a></Link>
-        <Link href='/about' activeClassName='active'><a>ABOUT</a></Link>
+        <Link href='/' activeClassName='active'><a>HJEM</a></Link>
+        <Link href='/about' activeClassName='active'><a>OM OSS</a></Link>
       </div>
       { info && <div className='nav-info'>{info}</div> }
     </nav>

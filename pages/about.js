@@ -86,7 +86,7 @@ export default () => {
   const dev = users.filter(user => user.dev)
   return (
     <Fragment>
-      <h2>Developers</h2>
+      <h2>Utviklere</h2>
       <Users users={dev} />
     </Fragment>
   )

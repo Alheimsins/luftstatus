@@ -1,4 +1,5 @@
-import { Fragment } from 'react'
+import { Layout } from '../components/alheimsins'
+
 const users = [
   {
     avatar: '/static/maccyber.png',
@@ -85,9 +86,9 @@ const Users = ({ users }) => (
 export default () => {
   const dev = users.filter(user => user.dev)
   return (
-    <Fragment>
+    <Layout>
       <h2>Utviklere</h2>
       <Users users={dev} />
-    </Fragment>
+    </Layout>
   )
 }

@@ -1,6 +1,6 @@
 import Link from './Link'
 
-export default ({ user, info }) => (
+export default ({ info }) => (
   <header>
     <nav>
       <div className='links-container'>

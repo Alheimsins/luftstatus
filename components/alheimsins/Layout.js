@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 
-export default ({ user, children }) => (
+export default ({ children }) => (
   <div className='container'>
     <Head>
       <title>Free open-source BigFive personality traits test - translated to multiple languages</title>
@@ -24,7 +24,7 @@ export default ({ user, children }) => (
       <link rel='shortcut icon' href='/static/favicon.ico' />
       <link rel='manifest' href='/static/manifest.json' />
     </Head>
-    <Header user={user} />
+    <Header />
     <main>
       {children}
     </main>

@@ -1,0 +1,64 @@
+{
+  "name": "luftstatus",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": {
+    "name": "Jonas Enge",
+    "email": "jonas.enge@t-fk.no",
+    "url": "https://github.com/telemark"
+  },
+  "contributors": [
+    {
+      "name": "Geir Gåsodden",
+      "email": "geir.gasodden@pythonia.no",
+      "url": "https://github.com/zrrrzzt"
+    }
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "dev": "next",
+    "build": "next build",
+    "start": "NODE_ENV=production next start",
+    "deploy": "now && now alias"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.18.0",
+    "next": "6.0.3",
+    "next-offline": "2.7.0",
+    "react": "16.4.0",
+    "react-dom": "16.4.0",
+    "react-icons": "2.2.7"
+  },
+  "devDependencies": {
+    "ava": "0.25.0",
+    "coveralls": "3.0.1",
+    "nsp": "3.2.1",
+    "nyc": "11.8.0",
+    "standard": "11.0.1",
+    "dotenv": "5.0.1"
+  },
+  "now": {
+    "name": "luftstatus",
+    "alias": "luftstatus.no",
+    "type": "npm",
+    "engines": {
+      "node": "10.0.0"
+    }
+  },
+  "dotenv": "production.env",
+  "standard": {
+    "ignore": [
+      "/static/*.js"
+    ]
+  }
+}

@@ -13,7 +13,7 @@ const links = [
     name: 'github'
   },
   {
-    url: '/about',
+    url: '/kontakt',
     name: 'about',
     target: '_self'
   }

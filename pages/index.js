@@ -1,10 +1,11 @@
 import { Component, Fragment } from 'react'
+import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
 import { Loading } from '../components/alheimsins'
 import axios from 'axios'
 const URL = 'https://api.nilu.no/aq/utd.json'
 
-export default class extends Component {
+class Index extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -22,13 +23,15 @@ export default class extends Component {
 
   render () {
     const {data, error} = this.state
+    const {coords} = this.props
     return (
       <Fragment>
+        { coords && coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
         {
           data
-            ? data.map(item =>
-              <div>
-                {item.station}
+            ? data.map((item, i) =>
+              <div key={i}>
+                {item.area} {item.station} {item.component}
                 <FaCircle style={{ color: `${item.color}` }} />
               </div>)
             : <Loading />
@@ -40,3 +43,10 @@ export default class extends Component {
     )
   }
 }
+
+export default geolocated({
+  positionOptions: {
+    enableHighAccuracy: false
+  },
+  userDecisionTimeout: 5000
+})(Index)

@@ -37,6 +37,7 @@
     "next-offline": "2.7.1",
     "react": "16.4.0",
     "react-dom": "16.4.0",
+    "react-geolocated": "2.4.0",
     "react-icons": "2.2.7"
   },
   "devDependencies": {

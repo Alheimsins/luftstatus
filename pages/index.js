@@ -65,8 +65,8 @@ class Index extends Component {
             .grid-container {
               display: grid;
               text-align: left;
-              grid-template-columns: auto auto;
-              grid-gap: 10%;
+              grid-template-columns: 120px auto;
+              grid-gap: 10px;
             }
             .grid-container-status {
               display: grid;

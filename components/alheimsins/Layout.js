@@ -74,6 +74,7 @@ export default ({ children }) => (
           grid-area: content;
           width: 100%;
           height: 100%;
+          margin-bottom: 20px;
         }
         .main a {
           color: #bd10e0;

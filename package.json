@@ -34,13 +34,13 @@
   "license": "MIT",
   "dependencies": {
     "axios": "0.18.0",
-    "immutable": "^3.8.2",
+    "immutable": "3.8.2",
     "next": "6.0.3",
     "react": "16.4.0",
     "react-dom": "16.4.0",
     "react-geolocated": "2.4.0",
     "react-icons": "2.2.7",
-    "react-map-gl": "^3.2.7"
+    "react-map-gl": "3.2.7"
   },
   "devDependencies": {
     "ava": "0.25.0",

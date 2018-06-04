@@ -4,6 +4,37 @@ import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { FaCircle } from 'react-icons/lib/fa'
 const token = 'pk.eyJ1IjoibWFjY3liZXIiLCJhIjoiY2ppMGR4MGszMDA4ZzNwczdlbDRocmwyMSJ9.ey1URzpaVGR2MkBfhLoSrQ'
 
+const InfoBox = () => (
+  <div className='info-box'>
+    <div style={{ textAlign: 'left' }}>
+      <FaCircle style={{ color: '#990099', border: '1px #dddddd solid', borderRadius: '10px' }} /> Svært høy<br />
+      <FaCircle style={{ color: '#ff0000', border: '1px #dddddd solid', borderRadius: '10px' }} /> Høy<br />
+      <FaCircle style={{ color: '#ff9900', border: '1px #dddddd solid', borderRadius: '10px' }} /> Moderat<br />
+      <FaCircle style={{ color: '#6ee86e', border: '1px #dddddd solid', borderRadius: '10px' }} /> Lite<br />
+      <FaCircle style={{ color: '#FFFFFF', border: '1px #dddddd solid', borderRadius: '10px' }} /> Ingen data<br />
+    </div>
+    <style jsx>
+      {`
+        .info-box {
+          position: absolute;
+          top: 0;
+          right: 0;
+          max-width: 320px;
+          background: #fff;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+          padding: 12px 24px;
+          margin: 20px;
+          font-size: 13px;
+          line-height: 2;
+          color: #6b6b76;
+          text-transform: uppercase;
+          outline: none;
+        }
+      `}
+    </style>
+  </div>
+)
+
 class Map extends Component {
   constructor (props) {
     super(props)
@@ -80,6 +111,7 @@ class Map extends Component {
             </span>
           </Marker>
           {this.renderPopup()}
+          <InfoBox />
         </ReactMapGL>
       </Fragment>
     )

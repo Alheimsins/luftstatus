@@ -20,7 +20,7 @@ class Map extends Component {
     }
   }
 
-  renderPopup() {
+  renderPopup () {
     const { popupInfo } = this.state
     return popupInfo && (
       <Popup tipSize={5}
@@ -36,7 +36,7 @@ class Map extends Component {
   }
 
   render () {
-    const { latitude, longitude, viewport, show } = this.state
+    const { latitude, longitude, viewport } = this.state
     const lat = parseFloat(latitude) || 59.2663054
     const long = parseFloat(longitude) || 9.2235048
     return (

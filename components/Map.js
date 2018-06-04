@@ -1,5 +1,5 @@
 import { geolocated } from 'react-geolocated'
-import { Component } from 'react'
+import { Component, Fragment } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { FaCircle } from 'react-icons/lib/fa'
 const token = 'pk.eyJ1IjoibWFjY3liZXIiLCJhIjoiY2ppMGR4MGszMDA4ZzNwczdlbDRocmwyMSJ9.ey1URzpaVGR2MkBfhLoSrQ'
@@ -18,6 +18,26 @@ class Map extends Component {
         zoom: 3
       }
     }
+    this.resize = this.resize.bind(this)
+  }
+
+  componentDidMount () {
+    window.addEventListener('resize', this.resize)
+    this.resize()
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('resize', this.resize)
+  }
+
+  resize () {
+    this.setState({
+      viewport: {
+        ...this.state.viewport,
+        width: this.props.width || window.innerWidth - 10,
+        height: this.props.height || window.innerHeight - 200
+      }
+    })
   }
 
   renderPopup () {
@@ -30,7 +50,14 @@ class Map extends Component {
         offsetLeft={-12}
         onClose={() => this.setState({popupInfo: false})}
       >
-        <div width='240px'>HELLO</div>
+        <div width='240px'>
+          <b style={{ fontSize: '14px' }}>FURULUND</b><br /><br />
+          <div style={{ color: '#333333', fontSize: '12px', textAlign: 'left' }}>
+            <FaCircle style={{ color: '#6ee86e' }} /> PM10: 23.0 µg/m³<br />
+            <FaCircle style={{ color: '#6ee86e' }} /> PM2.5: 4.9 µg/m³<br />
+            <FaCircle style={{ color: '#6ee86e' }} /> NO2: 5.1 µg/m³
+          </div>
+        </div>
       </Popup>
     )
   }
@@ -40,7 +67,7 @@ class Map extends Component {
     const lat = parseFloat(latitude) || 59.2663054
     const long = parseFloat(longitude) || 9.2235048
     return (
-      <div style={{ width: '100%', height: '100%' }}>
+      <Fragment>
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={token}
@@ -54,7 +81,7 @@ class Map extends Component {
           </Marker>
           {this.renderPopup()}
         </ReactMapGL>
-      </div>
+      </Fragment>
     )
   }
 }

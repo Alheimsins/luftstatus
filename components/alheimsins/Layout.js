@@ -87,6 +87,12 @@ export default ({ title, children }) => (
         .mapboxgl-canvas {
           position: unset !important;
         }
+        .overlays {
+          cursor: grab !important;
+        }
+        .mapboxgl-marker:hover {
+          cursor: pointer;
+        }
       `}
     </style>
   </div>

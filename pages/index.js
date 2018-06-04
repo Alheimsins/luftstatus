@@ -1,7 +1,8 @@
 import { Fragment, Component } from 'react'
 import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
-import { Loading, Layout } from '../components/alheimsins'
+import { Field, InputText, Loading, Layout } from '../components/alheimsins'
+import repackAirQualityData from '../lib/repack-air-quality-data'
 import axios from 'axios'
 const URL = 'https://api.nilu.no/aq/utd.json'
 
@@ -19,35 +20,45 @@ class Index extends Component {
   constructor (props) {
     super(props)
     this.state = {}
+    this.search = this.search.bind(this)
   }
 
   async componentDidMount () {
     try {
       const {data} = await axios.get(URL)
-      this.setState({ data, error: false })
+      const repackData = repackAirQualityData(data)
+      this.setState({ data: repackData, error: false })
     } catch (error) {
       console.log(error)
       this.setState({ error: error.message })
     }
   }
 
+  search ({ target }) {
+    const searchQuery = target.value
+    const { data } = this.state
+    const res = data.filter(item => item.area.includes(searchQuery) || item.municipality.includes(searchQuery) || item.station.includes(searchQuery))
+    this.setState({ searchQuery, data: res })
+  }
+
   render () {
-    const {data, error} = this.state
+    const {data, error, searchQuery} = this.state
     const {coords} = this.props
     return (
-      <Layout>
+      <Layout title='Luftstatus'>
         <div className='grid-container'>
           <div className='grid-item'>
             <ColorDescription />
           </div>
           { coords && !coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
+          <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div></div>
           <div className='grid-container-status'>
             {
               data
                 ? data.map((item, i) =>
                   <Fragment key={i}>
                     <div>
-                      {item.area} {item.station} {item.component} {' '}
+                      {item.area} {' '}
                     </div>
                     <div>
                       <FaCircle style={{ color: `${item.color}`, border: '1px #dddddd solid', borderRadius: '10px' }} />

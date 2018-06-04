@@ -86,7 +86,7 @@ const Users = ({ users }) => (
 export default () => {
   const dev = users.filter(user => user.dev)
   return (
-    <Layout>
+    <Layout title='Luftstatus'>
       <h2>Utviklere</h2>
       <Users users={dev} />
     </Layout>

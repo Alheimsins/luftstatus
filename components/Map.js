@@ -1,31 +1,41 @@
 import { geolocated } from 'react-geolocated'
-import {Component} from 'react'
-import ReactMapGL from 'react-map-gl'
+import { Component } from 'react'
+import ReactMapGL, { Marker } from 'react-map-gl'
+import { FaCircle } from 'react-icons/lib/fa'
 const token = 'pk.eyJ1IjoibWFjY3liZXIiLCJhIjoiY2ppMGR4MGszMDA4ZzNwczdlbDRocmwyMSJ9.ey1URzpaVGR2MkBfhLoSrQ'
 
 class Map extends Component {
   constructor (props) {
     super(props)
-    console.log(props)
+    const latitude = props.coords && props.coords.latitude ? props.coords.latitude : 63.4973838
+    const longitude = props.coords && props.cords.longitude ? props.cords.longitude : 0.1140052
     this.state = {
       viewport: {
         width: 800,
         height: 400,
-        latitude: 63.4973838,
-        longitude: 0.1140052,
+        latitude,
+        longitude,
         zoom: 3
       }
     }
   }
 
-  render() {
+  render () {
+    const { latitude, longitude, viewport } = this.state
+    const lat = parseFloat(latitude) || 59.2663054
+    const long = parseFloat(longitude) || 9.2235048
+    console.log(long)
     return (
       <div style={{ width: '100%', height: '100%' }}>
-      <ReactMapGL
-        {...this.state.viewport}
-        mapboxApiAccessToken={token}
-        onViewportChange={(viewport) => this.setState({viewport})}
-      />
+        <ReactMapGL
+          {...viewport}
+          mapboxApiAccessToken={token}
+          onViewportChange={(viewport) => this.setState({viewport})}
+        >
+          <Marker latitude={lat} longitude={long} offsetLeft={-20} offsetTop={-10}>
+            <FaCircle style={{ color: '#6ee86e' }} />
+          </Marker>
+        </ReactMapGL>
       </div>
     )
   }
@@ -37,4 +47,3 @@ export default geolocated({
   },
   userDecisionTimeout: 5000
 })(Map)
-

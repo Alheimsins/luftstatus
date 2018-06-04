@@ -36,9 +36,9 @@ class Index extends Component {
 
   search ({ target }) {
     const searchQuery = target.value
-    const { data } = this.state
+    const { data } = this.state
     const res = data.filter(item => item.area.includes(searchQuery) || item.municipality.includes(searchQuery) || item.station.includes(searchQuery))
-    this.setState({ searchQuery, data: res })
+    this.setState({ searchQuery, data: res })
   }
 
   render () {
@@ -51,7 +51,7 @@ class Index extends Component {
             <ColorDescription />
           </div>
           { coords && !coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
-          <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div></div>
+          <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div />
           <div className='grid-container-status'>
             {
               data

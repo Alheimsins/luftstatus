@@ -1,4 +1,4 @@
-import { Layout } from '../components/alheimsins'
+import { Fragment } from 'react'
 
 const users = [
   {
@@ -86,9 +86,9 @@ const Users = ({ users }) => (
 export default () => {
   const dev = users.filter(user => user.dev)
   return (
-    <Layout title='Luftstatus'>
+    <Fragment>
       <h2>Utviklere</h2>
       <Users users={dev} />
-    </Layout>
+    </Fragment>
   )
 }

@@ -1,10 +1,12 @@
 import { Fragment, Component } from 'react'
 import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
-import { Field, InputText, Loading, Layout } from '../components/alheimsins'
-import repackAirQualityData from '../lib/repack-air-quality-data'
-import axios from 'axios'
-const URL = 'https://api.nilu.no/aq/utd.json'
+import { Field, InputText, Loading } from '../components/alheimsins'
+import getData from '../lib/get-data'
+
+/* { coords && coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
+  <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div />
+*/
 
 const ColorDescription = () => (
   <span style={{ textAlign: 'left' }}>
@@ -25,11 +27,9 @@ class Index extends Component {
 
   async componentDidMount () {
     try {
-      const {data} = await axios.get(URL)
-      const repackData = repackAirQualityData(data)
-      this.setState({ data: repackData, error: false })
+      const data = await getData('byMunicipalities')
+      this.setState({ data, error: false })
     } catch (error) {
-      console.log(error)
       this.setState({ error: error.message })
     }
   }
@@ -45,23 +45,20 @@ class Index extends Component {
     const {data, error, searchQuery} = this.state
     const {coords} = this.props
     return (
-      <Layout title='Luftstatus'>
+      <Fragment>
+        <h1>Luftkvaliteten nå</h1>
         <div className='grid-container'>
           <div className='grid-item'>
             <ColorDescription />
           </div>
-          { coords && !coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
-          <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div />
           <div className='grid-container-status'>
             {
               data
                 ? data.map((item, i) =>
                   <Fragment key={i}>
                     <div>
-                      {item.area} {' '}
-                    </div>
-                    <div>
-                      <FaCircle style={{ color: `${item.color}`, border: '1px #dddddd solid', borderRadius: '10px' }} />
+                      <FaCircle style={{ color: `${item.color}`, border: '1px #dddddd solid', borderRadius: '10px', marginRight: '10px' }} />
+                      {item.area}
                     </div>
                   </Fragment>)
                 : <Loading />
@@ -86,7 +83,7 @@ class Index extends Component {
             }
           `}
         </style>
-      </Layout>
+      </Fragment>
     )
   }
 }

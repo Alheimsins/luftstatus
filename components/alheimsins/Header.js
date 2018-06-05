@@ -6,6 +6,7 @@ export default ({ info }) => (
       <div className='links-container'>
         <Link href='/' activeClassName='active'><a>HJEM</a></Link>
         <Link href='/kart' activeClassName='active'><a>KART</a></Link>
+        <Link href='/info' activeClassName='active'><a>INFO</a></Link>
         <Link href='/kontakt' activeClassName='active'><a>KONTAKT</a></Link>
       </div>
       { info && <div className='nav-info'>{info}</div> }

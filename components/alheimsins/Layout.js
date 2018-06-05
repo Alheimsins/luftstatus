@@ -19,6 +19,7 @@ export default ({ title, children }) => (
       <meta name='description' content='Luftstatus' />
       <meta name='keywords' content='Luftstatus' />
       <link rel='stylesheet' href='/static/mapbox-gl.css' />
+      <link rel='stylesheet' href='/static/font-awesome-animation.min.css' />
       <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: `{ "@context": "http://schema.org/", "@type": "WebSite", "name": "Luftstatus", "url": "https://luftstatus.no" }` }} />
       <link rel='icon' sizes='192x192' href='/static/android-icon-192x192.png' />
       <link rel='apple-touch-icon' href='/static/apple-icon-152x152.png' />
@@ -92,6 +93,9 @@ export default ({ title, children }) => (
         }
         .mapboxgl-marker:hover {
           cursor: pointer;
+        }
+        .mapboxgl-ctrl-bottom-right {
+          display: none;
         }
       `}
     </style>

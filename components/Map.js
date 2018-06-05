@@ -2,16 +2,18 @@ import { geolocated } from 'react-geolocated'
 import { Component, Fragment } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { FaCircle } from 'react-icons/lib/fa'
+import axios from 'axios'
+const URL = 'https://api.nilu.no/aq/utd.json'
 const token = 'pk.eyJ1IjoibWFjY3liZXIiLCJhIjoiY2ppMGR4MGszMDA4ZzNwczdlbDRocmwyMSJ9.ey1URzpaVGR2MkBfhLoSrQ'
 
 const InfoBox = () => (
   <div className='info-box'>
     <div style={{ textAlign: 'left' }}>
-      <FaCircle style={{ color: '#990099', border: '1px #dddddd solid', borderRadius: '10px' }} /> Svært høy<br />
-      <FaCircle style={{ color: '#ff0000', border: '1px #dddddd solid', borderRadius: '10px' }} /> Høy<br />
-      <FaCircle style={{ color: '#ff9900', border: '1px #dddddd solid', borderRadius: '10px' }} /> Moderat<br />
-      <FaCircle style={{ color: '#6ee86e', border: '1px #dddddd solid', borderRadius: '10px' }} /> Lite<br />
-      <FaCircle style={{ color: '#FFFFFF', border: '1px #dddddd solid', borderRadius: '10px' }} /> Ingen data<br />
+      <FaCircle className='faa-pulse animated-hover' style={{ color: '#990099', border: '1px #dddddd solid', borderRadius: '10px' }} /> Svært høy<br />
+      <FaCircle className='faa-pulse animated-hover' style={{ color: '#ff0000', border: '1px #dddddd solid', borderRadius: '10px' }} /> Høy<br />
+      <FaCircle className='faa-pulse animated-hover' style={{ color: '#ff9900', border: '1px #dddddd solid', borderRadius: '10px' }} /> Moderat<br />
+      <FaCircle className='faa-pulse animated-hover' style={{ color: '#6ee86e', border: '1px #dddddd solid', borderRadius: '10px' }} /> Lite<br />
+      <FaCircle className='faa-pulse animated-hover' style={{ color: '#FFFFFF', border: '1px #dddddd solid', borderRadius: '10px' }} /> Ingen data<br />
     </div>
     <style jsx>
       {`
@@ -35,6 +37,20 @@ const InfoBox = () => (
   </div>
 )
 
+const Markers = ({ popupInfo, data }) => {
+  const lat = 59.2663054
+  const long = 9.2235048
+  return (
+    data.filter(item => item.component === 'PM2.5').map((item, i) => (
+      <Marker key={i} latitude={item.latitude} longitude={item.longitude} offsetLeft={-20} offsetTop={-10} captureClick={false}>
+        <span onClick={() => popupInfo({ lat: item.latitude, long: item.longitude, title: item.station })}>
+          <FaCircle className={ item.color === '990099' || item.color === 'ff0000' ? 'faa-flash animated' : 'faa-pulse animated-hover'} style={{ color: item.color }} />
+        </span>
+      </Marker>
+    ))
+  )
+}
+
 class Map extends Component {
   constructor (props) {
     super(props)
@@ -50,15 +66,27 @@ class Map extends Component {
       }
     }
     this.resize = this.resize.bind(this)
+    this.popupInfo = this.popupInfo.bind(this)
   }
 
-  componentDidMount () {
+  async componentDidMount () {
     window.addEventListener('resize', this.resize)
     this.resize()
+    try {
+      const {data} = await axios.get(URL)
+      this.setState({ data, error: false })
+    } catch (error) {
+      console.log(error)
+      this.setState({ error: error.message })
+    }
   }
 
   componentWillUnmount () {
     window.removeEventListener('resize', this.resize)
+  }
+
+  popupInfo({ lat, long, title }) {
+    this.setState({popupInfo: true, lat, long, title })
   }
 
   resize () {
@@ -72,17 +100,17 @@ class Map extends Component {
   }
 
   renderPopup () {
-    const { popupInfo } = this.state
+    const { popupInfo, lat, long, title } = this.state
     return popupInfo && (
       <Popup tipSize={5}
         anchor='top'
-        latitude={59.2663054}
-        longitude={9.2235048}
+        latitude={lat}
+        longitude={long}
         offsetLeft={-12}
         onClose={() => this.setState({popupInfo: false})}
       >
         <div width='240px'>
-          <b style={{ fontSize: '14px' }}>FURULUND</b><br /><br />
+          <div style={{ fontSize: '14px', marginBottom: '3px' }}>{title.toUpperCase()}</div>
           <div style={{ color: '#333333', fontSize: '12px', textAlign: 'left' }}>
             <FaCircle style={{ color: '#6ee86e' }} /> PM10: 23.0 µg/m³<br />
             <FaCircle style={{ color: '#6ee86e' }} /> PM2.5: 4.9 µg/m³<br />
@@ -94,7 +122,7 @@ class Map extends Component {
   }
 
   render () {
-    const { latitude, longitude, viewport } = this.state
+    const { latitude, longitude, viewport, data } = this.state
     const lat = parseFloat(latitude) || 59.2663054
     const long = parseFloat(longitude) || 9.2235048
     return (
@@ -105,11 +133,7 @@ class Map extends Component {
           onViewportChange={(viewport) => this.setState({viewport})}
           mapStyle='mapbox://styles/mapbox/dark-v9'
         >
-          <Marker latitude={lat} longitude={long} offsetLeft={-20} offsetTop={-10} captureClick={false}>
-            <span onClick={() => this.setState({popupInfo: true})}>
-              <FaCircle style={{ color: '#6ee86e' }} />
-            </span>
-          </Marker>
+          { data && <Markers popupInfo={this.popupInfo} data={data}/> }
           {this.renderPopup()}
           <InfoBox />
         </ReactMapGL>

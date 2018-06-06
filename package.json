@@ -26,7 +26,9 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "deploy": "now && now alias"
+    "deploy": "now && now alias",
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [],
   "license": "MIT",
@@ -55,7 +57,7 @@
     "alias": "luftstatus.no",
     "type": "npm",
     "engines": {
-      "node": "10.0.0"
+      "node": ">=10.0.0"
     }
   },
   "dotenv": "production.env",

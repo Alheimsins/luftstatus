@@ -23,9 +23,7 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
-        <Layout title='Luftstatus'>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </Container>
     )
   }

@@ -1,0 +1,1 @@
+https://api.openaq.org/v1/measurements?location=Hjortnes&parameter[]=co&parameter[]=pm25

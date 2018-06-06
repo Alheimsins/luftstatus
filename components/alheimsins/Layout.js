@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
 
-export default ({ title, children }) => (
+export default ({ title, theme = {}, children }) => (
   <div className='container'>
     <Head>
       <title>{title}</title>
@@ -16,8 +16,8 @@ export default ({ title, children }) => (
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content='Luftstatus' />
       <meta name='twitter:image' content='https://bigfive-test.com/static/apple-icon.png' />
-      <meta name='description' content='Luftstatus' />
-      <meta name='keywords' content='Luftstatus' />
+      <meta name='description' content='Se forurensning og luftkvalitet nær deg.' />
+      <meta name='keywords' content='forurensning luftkvalitet luft astma' />
       <link rel='stylesheet' href='/static/mapbox-gl.css' />
       <link rel='stylesheet' href='/static/font-awesome-animation.min.css' />
       <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: `{ "@context": "http://schema.org/", "@type": "WebSite", "name": "Luftstatus", "url": "https://luftstatus.no" }` }} />
@@ -26,7 +26,7 @@ export default ({ title, children }) => (
       <link rel='shortcut icon' href='/static/favicon.ico' />
       <link rel='manifest' href='/static/manifest.json' />
     </Head>
-    <Header />
+    <Header theme={theme} />
     <main>
       {children}
     </main>
@@ -34,7 +34,7 @@ export default ({ title, children }) => (
     <style jsx global>
       {`
         body {
-          background: white;
+          background: ${theme === 'black' ? 'black' : 'white'};
           color: black;
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
           text-align: center;
@@ -48,6 +48,7 @@ export default ({ title, children }) => (
         }
         a {
           text-decoration: none;
+          color: black;
         }
         h1 {
           font-weight: 400;
@@ -96,6 +97,12 @@ export default ({ title, children }) => (
         }
         .mapboxgl-ctrl-bottom-right {
           display: none;
+        }
+        .toTop {
+          z-index: 1000;
+        }
+        .mapboxgl-popup {
+          z-index: 2000;
         }
       `}
     </style>

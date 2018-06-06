@@ -1,7 +1,7 @@
 import { Fragment, Component } from 'react'
 import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
-import { Field, InputText, Loading } from '../components/alheimsins'
+import { Layout, Field, InputText, Loading, Link } from '../components/alheimsins'
 import getData from '../lib/get-data'
 
 /* { coords && coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
@@ -45,7 +45,7 @@ class Index extends Component {
     const {data, error, searchQuery} = this.state
     const {coords} = this.props
     return (
-      <Fragment>
+      <Layout title='luftstatus.no - Se forurensning og luftkvalitet nær deg.'>
         <h1>Luftkvaliteten nå</h1>
         <div className='grid-container'>
           <div className='grid-item'>
@@ -58,7 +58,7 @@ class Index extends Component {
                   <Fragment key={i}>
                     <div>
                       <FaCircle style={{ color: `${item.color}`, border: '1px #dddddd solid', borderRadius: '10px', marginRight: '10px' }} />
-                      {item.area}
+                      <Link route='sone' params={{id: item.area}}><a>{item.area}</a></Link>
                     </div>
                   </Fragment>)
                 : <Loading />
@@ -83,7 +83,7 @@ class Index extends Component {
             }
           `}
         </style>
-      </Fragment>
+      </Layout>
     )
   }
 }

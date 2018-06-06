@@ -3,8 +3,8 @@ const withOffline = require('next-offline')
 module.exports = {
   useFileSystemPublicRoutes: false,
   publicRuntimeConfig: {
-    URL: 'https://api.nilu.no/aq/utd.json',
-    TOKEN: 'pk.eyJ1IjoibWFjY3liZXIiLCJhIjoiY2ppMGR4MGszMDA4ZzNwczdlbDRocmwyMSJ9.ey1URzpaVGR2MkBfhLoSrQ'
+    URL: process.env.URL || 'https://api.nilu.no/aq/utd.json',
+    TOKEN: process.env.TOKEN || '<INSERT-YOUR-MAPBOX-TOKEN>'
   },
   ...withOffline()
 }

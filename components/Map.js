@@ -41,7 +41,7 @@ const InfoBox = () => (
 const Markers = ({ popupInfo, data }) => {
   return (
     data.map((item, i) => (
-      <Marker key={i} latitude={item.latitude} longitude={item.longitude} offsetLeft={-20} offsetTop={-10} captureClick={false}>
+      <Marker key={i} latitude={item.latitude} longitude={item.longitude} offsetLeft={-20} offsetTop={-10} captureClick={false} className={item.color !== 'FFFFFF' && item.color !== '6ee86e' ? 'toTop' : ''}>
         <span onClick={() => popupInfo({ lat: item.latitude, long: item.longitude, title: item.station, components: item.data })}>
           <FaCircle className={item.color === '990099' || item.color === 'ff0000' ? 'faa-flash animated' : 'faa-pulse animated-hover'} style={{ color: item.color }} />
         </span>
@@ -61,7 +61,8 @@ class Map extends Component {
         height: 400,
         latitude,
         longitude,
-        zoom: 3
+        zoom: 3,
+        minZoom: 3
       }
     }
     this.resize = this.resize.bind(this)
@@ -92,7 +93,7 @@ class Map extends Component {
     this.setState({
       viewport: {
         ...this.state.viewport,
-        width: this.props.width || window.innerWidth - 10,
+        width: this.props.width || window.innerWidth - 30,
         height: this.props.height || window.innerHeight - 200
       }
     })

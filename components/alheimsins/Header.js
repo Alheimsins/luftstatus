@@ -1,13 +1,14 @@
 import Link from './Link'
 
-export default ({ info }) => (
+export default ({ info, theme = {} }) => (
   <header>
     <nav>
       <div className='links-container'>
         <Link route='/' activeClassName='active'><a>HJEM</a></Link>
-        <Link route='/kart' activeClassName='active'><a>KART</a></Link>
-        <Link route='/info' activeClassName='active'><a>INFO</a></Link>
-        <Link route='/kontakt' activeClassName='active'><a>KONTAKT</a></Link>
+        <Link prefetch route='/kart' activeClassName='active'><a>KART</a></Link>
+        <Link prefetch route='/info' activeClassName='active'><a>INFO</a></Link>
+        <Link prefetch route='/varsel' activeClassName='active'><a>VARSEL</a></Link>
+        <Link prefetch route='/kontakt' activeClassName='active'><a>KONTAKT</a></Link>
       </div>
       { info && <div className='nav-info'>{info}</div> }
     </nav>
@@ -16,7 +17,6 @@ export default ({ info }) => (
         header {
           grid-area: header;
           justify-self: center;
-          background: white;
           margin: auto;
           padding: 25px;
           max-width: 900px;
@@ -35,10 +35,10 @@ export default ({ info }) => (
           font-size: 12px;
         }
         a:hover {
-          color: black;
+          color: ${theme === 'black' ? 'white' : 'black'};
         }
         .active {
-          color: black !important;
+          color: ${theme === 'black' ? 'white !important' : 'black !important'};
         }
       `}
     </style>

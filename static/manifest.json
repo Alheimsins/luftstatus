@@ -1,7 +1,7 @@
 {
- "name": "BigFive personality test",
- "short_name": "B5Test",
- "description": "Take a free, open-source BigFive personality test",
+ "name": "Luftstatus",
+ "short_name": "Luftstatus",
+ "description": "Se forurensning og luftkvalitet nær deg.",
  "display": "fullscreen",
  "background_color": "#000000",
  "theme_color": "#000000",

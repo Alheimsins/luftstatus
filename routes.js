@@ -6,3 +6,4 @@ routes
   .add('info')
   .add('kart')
   .add('kontakt')
+  .add('varsel')

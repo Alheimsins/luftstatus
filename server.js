@@ -18,6 +18,12 @@ app.prepare().then(() => {
     const filePath = join(__dirname, '.next', 'service-worker.js')
     return app.serveStatic(req, res, filePath)
   })
+
+  server.get('/sitemap.xml', (req, res) => {
+    const filePath = join(__dirname, 'static', 'sitemap.xml')
+    return app.serveStatic(req, res, filePath)
+  })
+
   server.use(handler)
 
   server.listen(port, (err) => {

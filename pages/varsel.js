@@ -1,4 +1,4 @@
-import { Layout, Button } from '../components/alheimsins'
+import { Layout, Button } from '../components/alheimsins'
 
 export default () => (
   <Layout title='luftstatus.no - Se forurensning og luftkvalitet nær deg.'>

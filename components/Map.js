@@ -72,6 +72,17 @@ class Map extends Component {
   async componentDidMount () {
     window.addEventListener('resize', this.resize)
     this.resize()
+    this.interval = setInterval(() => this.tick(), 30000)
+    try {
+      const data = await getData('byStations')
+      this.setState({ data, error: false })
+    } catch (error) {
+      console.log(error)
+      this.setState({ error: error.message })
+    }
+  }
+
+  async tick () {
     try {
       const data = await getData('byStations')
       this.setState({ data, error: false })
@@ -83,6 +94,7 @@ class Map extends Component {
 
   componentWillUnmount () {
     window.removeEventListener('resize', this.resize)
+    clearInterval(this.interval)
   }
 
   popupInfo ({ lat, long, title, components }) {

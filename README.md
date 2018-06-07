@@ -48,5 +48,3 @@ Created by [zrrzzt](https://github.com/zrrrzzt) and [maccyber](https://github.co
 
 <img src="https://image.ibb.co/dPH08G/logo_black.png" height="150px" width="150px" />
 
-```
-

@@ -1,4 +1,3 @@
-import { Layout } from '../components/alheimsins'
 import App, { Container } from 'next/app'
 import React from 'react'
 import { Router } from '../routes'

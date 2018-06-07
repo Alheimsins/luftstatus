@@ -28,7 +28,8 @@
     "start": "NODE_ENV=production node server.js",
     "deploy": "now && now alias",
     "standard-fix": "standard --fix",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install",
+    "clear": "rm -rf .next"
   },
   "keywords": [],
   "license": "MIT",

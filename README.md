@@ -36,7 +36,7 @@ Install [Docker](https://www.docker.com/)
 
 ```sh
 docker run -d --name luftstatus-web alheimsins/luftstatus
-``
+```
 
 ## License
 

@@ -2,7 +2,7 @@ import { Fragment, Component } from 'react'
 import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
 import { Layout, Field, InputText, Loading, Link } from '../components/alheimsins'
-import getData from '../lib/get-data'
+import getData from '../lib/get-data-areas'
 
 /* { coords && coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
   <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div />
@@ -46,7 +46,7 @@ class Index extends Component {
     const {coords} = this.props
     return (
       <Layout title='luftstatus.no - Se forurensning og luftkvalitet nær deg.'>
-        <h1>Luftkvaliteten nå</h1>
+        <h1>Luftforurensning nå</h1>
         <div className='grid-container'>
           <div className='grid-item'>
             <ColorDescription />

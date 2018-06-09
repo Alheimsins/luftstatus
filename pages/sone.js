@@ -15,10 +15,9 @@ export default class Sone extends Component {
   async componentDidMount () {
     try {
       const { id } = this.state
-      const data = await getData('byMunicipalities')
-      const { stations } = data.find(item => item.municipality === id)
-      console.log(stations)
-      this.setState({ data: stations, error: false })
+      const { areas: data } = await getData()
+      const { stations: filterStations } = data.find(item => item.municipality === id)
+      this.setState({ data: filterStations, error: false })
     } catch (error) {
       console.log(error)
       this.setState({ error: error.message })

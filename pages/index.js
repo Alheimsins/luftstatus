@@ -27,7 +27,7 @@ class Index extends Component {
 
   async componentDidMount () {
     try {
-      const data = await getData('byMunicipalities')
+      const { areas: data } = await getData()
       this.setState({ data, error: false })
     } catch (error) {
       this.setState({ error: error.message })

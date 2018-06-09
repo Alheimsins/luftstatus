@@ -74,7 +74,7 @@ class Map extends Component {
     this.resize()
     this.interval = setInterval(() => this.tick(), 30000)
     try {
-      const data = await getData('byStations')
+      const { stations: data } = await getData()
       this.setState({ data, error: false })
     } catch (error) {
       console.log(error)
@@ -84,7 +84,7 @@ class Map extends Component {
 
   async tick () {
     try {
-      const data = await getData('byStations')
+      const { stations: data } = await getData()
       this.setState({ data, error: false })
     } catch (error) {
       console.log(error)

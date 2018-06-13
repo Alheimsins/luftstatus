@@ -39,8 +39,8 @@
     "next": "6.0.3",
     "next-offline": "2.7.2",
     "next-routes": "1.4.2",
-    "react": "16.4.0",
-    "react-dom": "16.4.0",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
     "react-geolocated": "2.4.0",
     "react-icons": "2.2.7",
     "react-map-gl": "3.2.8"

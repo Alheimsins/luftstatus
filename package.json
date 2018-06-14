@@ -43,7 +43,7 @@
     "react-dom": "16.4.1",
     "react-geolocated": "2.4.0",
     "react-icons": "2.2.7",
-    "react-map-gl": "3.2.8"
+    "react-map-gl": "3.2.9"
   },
   "devDependencies": {
     "ava": "0.25.0",

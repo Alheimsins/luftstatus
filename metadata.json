@@ -1,0 +1,452 @@
+[
+  {
+    "station": "Klosterhaugen",
+    "eoi": "NO0120A",
+    "description": "Dette er en såkalt referansestasjon, sentralt plassert i byen, og samtidig noe tilbaketrukket fra den største trafikken. Referansestasjonen er vurdert å gi et uttrykk for den gjennomsnittlige luftkvalitet som anslagsvis ett hundre tusen mennesker utsettes for. Stasjonen var tidligere ved Bergen rådhus, men ble flyttet til Klosterhaugen i 2017",
+    "owner": "Bergen kommune",
+    "county": "Hordaland"
+  },
+  {
+    "station": "Danmarks plass",
+    "eoi": "NO0059A",
+    "description": "Stasjonen på Danmarksplass er en såkalt «trafikk-stasjon» som måler luftkvalitet i områder med tett trafikk der luftforurensningen har vært særlig stor. Tidligere har dette vært gjort i Nygårdsgaten i Michael Krohns gate og i Fjøsangerveien utenfor Krohnsminde stadion. Stasjonen er nå plassert i trekanttomten mellom Bjørnsons gate, Edvard Griegs vei og Fjøsangerveien i det nord vestre hjørnet mot Fjøsangerveien.",
+    "owner": "Bergen kommune",
+    "county": "Hordaland"
+  },
+  {
+    "station": "Loddefjord",
+    "eoi": "NO0109A",
+    "description": "Stasjonen ved Loddefjord er en vegnær stasjon som måler luftkvalitet i områder med tett trafikk der luftforurensningen har vært særlig stor. Stasjonen er plassert i begynnelsen av Bjørndalsbakken ikke langt fra rundkjøringen i Loddefjord.",
+    "owner": "Bergen kommune",
+    "county": "Hordaland"
+  },
+  {
+    "station": "Rådal",
+    "eoi": "NO0121A",
+    "description": "Stasjonen ved Råtjørn i Fana er en vegnær stasjon som måler forurensning i et område med tett trafikk. Stasjonen er plassert på østsiden av Fanavegen, nord for rundkjøringen som leder til bl.a. Flyplassvegen.",
+    "owner": "Bergen kommune",
+    "county": "Hordaland"
+  },
+  {
+    "station": "Rolland, Åsane",
+    "eoi": "NO0108A",
+    "description": "Stasjonen i Åsane er en bybakgrunnstasjon som måler luften fra alle kilder i nærheten. Stasjonen er plassert mellom Rolland barnehage og Rolland legesenter, ikke langt fra Rolland skole.",
+    "owner": "Bergen kommune",
+    "county": "Hordaland"
+  },
+  {
+    "station": "Birkenesobservatoriet",
+    "eoi": "NO0002R",
+    "description": "<p>Stasjonen ligger i Birkeland i Aust-Agder og kalles et observatorium pga det store spektret av målinger som foretas der.</p><p>Observatoriet er en avansert målestasjon for studier av bl.a. klimaendringer og langtransportert luftforurensning.</p><p>Stasjonen er en del av det globale målenettverket GAW og det europeiske overvåkningsprogrammet EMEP.</p>Birkenes er en av stasjonene med lengst tidsserier for luftkvalitet i Europa.</p><p>Rutinemålinger av SO2 startet allerede i 1971, mens ozonmålingene startet på 1980-tallet. Stasjonen er godt egnet til å fange opp episoder med forurensninger fra kontinentet og de britiske øyer.</p>",
+    "owner": "NILU",
+    "county": "Aust-Agder"
+  },
+  {
+    "station": "Olav V gate",
+    "eoi": null,
+    "description": "Målestasjon i Bodø",
+    "owner": "Bodø kommune",
+    "county": "Nordland"
+  },
+  {
+    "station": "Lommedalen",
+    "eoi": "NO0081A",
+    "description": "Stasjonen måler bakkenær ozon.",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "Bekkestua",
+    "eoi": "NO0114A",
+    "description": "<p>Ved bibliotek på Bekkestua. Måler:</p>- Svevestøv (PM10 og PM2.5)<br/>- Nitrogenoksider (NOx)<br/><p>Parameterne måles og rapporteres kontinuerlig online.</p><p>Oppstart på Bekkestua sommer 2016.</p>",
+    "owner": "Bærum kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "Eilif Dues vei",
+    "eoi": "NO0099A",
+    "description": "Vegnær stasjon lokalisert ved E18 i Bærum. Operativ hele året. Stasjonen måler PM10, PM2.5 og nitrogenoksider.",
+    "owner": "Statens Vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Bangeløkka",
+    "eoi": "NO0067A",
+    "description": "Gatestasjon.",
+    "owner": "Statens Vegvesen",
+    "county": "Buskerud"
+  },
+  {
+    "station": "Leiret",
+    "eoi": "NO0119A",
+    "description": "",
+    "owner": ""
+  },
+  {
+    "station": "St.Croix",
+    "description": "Målestasjonen i St.Croix-krysset i Fredrikstad er en såkalt gatestasjon som måler luftkvalitet i et område med stor trafikk der luftforurensningen kan være stor. Her måles PM10.",
+    "owner": "Fredrikstad kommune",
+    "county": "Østfold"
+  },
+  {
+    "station": "Nygaardsgata",
+    "eoi": "NO0105A",
+    "description": "Målestasjon i Nygaardsgata.",
+    "owner": "Fredrikstad kommune",
+    "county": "Østfold"
+  },
+  {
+    "station": "Minnesundvegen, Gjøvik",
+    "eoi": "NO0103A",
+    "description": "Målestasjonen på Gjøvik er en vegnær målestasjon som eies av Statens vegvesen Region øst. Stasjonen måler PM10, PM2,5 og NO2.",
+    "owner": "Statens vegvesen",
+    "county": "Oppland"
+  },
+  {
+    "station": "Haukenes",
+    "eoi": "NO0062A",
+    "description": "Målestasjonen ligger ved Norsjø, ca. 7 km nordvest for Skien sentrum. Det foretas automatiske målinger av O3 og NO2. Formålet med målingene er å kartlegge nivåene av bakkenær ozon i et suburbant område",
+    "owner": [
+      "Porsgrunn kommune",
+      "Skien kommune"
+    ],
+    "county": "Telemark"
+  },
+  {
+    "station": "Lensmannsdalen",
+    "eoi": "NO0061A",
+    "description": "Målestasjonen ligger nær riksveg 354 på Tollnes i Skien. Hovedkilden for luftforurensningen her er utslipp fra vegtrafikk. Det foretas automatiske målinger av NO2, svevestøv (PM10 og PM 2,5) og benzen. ",
+    "owner": [
+      "Porsgrunn kommune",
+      "Skien kommune"
+    ],
+    "county": "Telemark"
+  },
+  {
+    "station": "Furulund",
+    "eoi": "NO0115A",
+    "description": "Målestasjonen ligger åpent til mellom en fotballbane og en gate med privatboliger. Det foretas automatiske målinger av NO2, SO2 og PM2,5 og PM10. Hovedutslippskildene er industri, havneaktivitet og vedfyring. Sementfabrikken Norcem Brevik ligger ca 500m unna i luftlinje. Grenland havn ligger ca 600m unna. SO2-måler er tatt ut av drift for service.",
+    "owner": [
+      "Porsgrunn kommune",
+      "Skien kommune"
+    ],
+    "county": "Telemark"
+  },
+  {
+    "station": "Sverresgate",
+    "eoi": "NO0106A",
+    "description": "Her foretas det automatiske målinger av NO2 og svevestøv(PM10). Stasjonen er en Veinær stasjon. Hovedutslipppskildene til denne stasjonen kommer fra boligoppvarming(vedfyring) og veitrafikk.",
+    "owner": [
+      "Porsgrunn kommune",
+      "Skien kommune"
+    ],
+    "county": "Telemark"
+  },
+  {
+    "station": "Vangsveien, Hamar",
+    "eoi": "NO0104A",
+    "description": "Målestasjonen på Hamar er en vegnær målestasjon som eies av Statens vegvesen Region øst. Stasjonen måler PM10, PM2,5 og NO2.",
+    "owner": "Statens vegvesen",
+    "county": "Oppland"
+  },
+  {
+    "station": "Seljestad Rv83",
+    "eoi": null,
+    "description": "Stasjonen er trafikkorientert og måler luftkvalitet i område der luftforurensingen regnes å være særlig stor. Målingene omfatter partikkelforurensning (PM10, og PM 2,5) og nitrogendioksid (NO2).",
+    "owner": [
+      "Harstad kommune",
+      "Statens vegvesen",
+      "Harstad Havn",
+      "Statkraft"
+    ],
+    "county": "Nordland"
+  },
+  {
+    "station": "Hurdal25",
+    "eoi": "NO0056R",
+    "description": "<p>Stasjonen er en regional bakgrunnsstasjon, som er lokalisert i skogsområdet øst for Hurdalssjøen.</p><p>Her måles ozon og hovedkomponenter i luft og nedbør. Stasjonen er del av det europeiske overvåkningsprogrammet EMEP.</p>",
+    "owner": "NILU",
+    "county": "Akershus"
+  },
+  {
+    "station": "Gartnerløkka",
+    "eoi": "NO0092A",
+    "description": "Stasjonen måler luftkvaliteten i et område der lufta antas å være forurenset av biltrafikken.",
+    "owner": "Kristiansand kommune",
+    "county": "Vest-Agder"
+  },
+  {
+    "station": "Stener Heyerdahl",
+    "eoi": "NO0063A",
+    "description": "Stasjonen måler luftkvaliteten i et byområde der lufta kan være noe forurenset. Som bildet viser står stasjonenen inni den lave trebygningen. Luftprøven hentes ned over tak.",
+    "owner": "Kristiansand kommune",
+    "county": "Vest-Agder"
+  },
+  {
+    "station": "Kårvatn",
+    "eoi": "NO0039R",
+    "description": "<p>Stasjonen ligger i utkanten av Trollheimen, i Møre og Romsdal fylke. Den er en regional bakgrunns-stasjon, langt unna større utslippskilder.</p><p>Nærmeste by/tettsted er Surnadal, som ligger ca 30 km unna. Her måles ozon og hovedkomponenter i luft og nedbør.</p><p>Stasjonen er del av det europeiske overvåkningsprogrammet EMEP under langtransportkonvensjonen (CLTRAP).</p>",
+    "owner": "NILU",
+    "county": "Møre og Romsdal"
+  },
+  {
+    "station": "Bankplassen",
+    "eoi": "NO0074A",
+    "description": "<p>Målestasjonen står ved Kirkegata, inntil Hammartun skoles utearealer. Stasjonen måler luftkvaliteten slik den er ved ei gate med mye trafikk.</p><p>Det foretas kontinuerlige målinger av NO2 og svevestøv (PM2,5 og PM10) som vises online, samt gjennomsnittsmålinger av benzen som rapporteres årlig.<p>",
+    "owner": "",
+    "county": "Oppland"
+  },
+  {
+    "station": "Lillehammer barnehage",
+    "eoi": "NO0075A",
+    "description": "Målestasjonen står på barnehagearealet, mellom Gamlev. og Th.Lundes veg. Stasjonen ligger litt unna hovedtrafikken og er vurdert å måle luftkvaliteten i et sentrumsnært boligområde. Det foretas automatiske målinger av NO2 og svevestøv (fraksjonene PM2,5 og PM10) som vises online, samt gjennomsnittsmålinger av PAH som rapporteres årlig.",
+    "owner": "Lillehammer kommune",
+    "county": "Oppland"
+  },
+  {
+    "station": "Holta",
+    "eoi": "NO0100A",
+    "description": "<p>Holta stasjon måler SO2. Den er plassert ved idrettsanlegget.</p><p>Stasjonen kalibreres ukentlig (fortrinnsvis Mandager kl 10). Timesverdier med kalibrering fjernes da instrumentet under kalibrering ikke har målt uteluft, men gass fra en gassflaske.</p>",
+    "owner": "Lillesand kommune",
+    "county": "Aust-Agder"
+  },
+  {
+    "station": "Vigernes",
+    "eoi": "NO0111A",
+    "description": "Vegnær målestasjon ved RV22 ved Vigernes. Det måles NO2 og svevestøv PM10 og PM2,5.",
+    "owner": "Statens vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Moheia Vest",
+    "eoi": "NO0123A",
+    "description": "<p>Målestasjon på Moheia (Moheia vest)</p><p>Stasjonen måler PM10, PM2,5 og NO2</p><p>Stasjonen driftes på helårig basis av SINTEF Molab AS</p>",
+    "owner": "SINTEF Molab AS",
+    "county": "Nordland"
+  },
+  {
+    "station": "Kransen",
+    "eoi": "NO0112A",
+    "description": "Målestasjonen er plassert ved Kransen (riksvei 19) og måler svevestøv (PM10 og PM2,5).",
+    "owner": "Moss kommune",
+    "county": "Østfold"
+  },
+  {
+    "station": "Sentrum",
+    "eoi": "NO0113A",
+    "description": "Formålet med stasjonen er å kartlegge luftkvaliteten i Narvik. Stasjonen er plassert i sentrum av byen nært industriell virksomhet og E6 gjennom byen.",
+    "owner": "Narvik kommune",
+    "county": "Norland"
+  },
+  {
+    "station": "Åkebergveien",
+    "eoi": null,
+    "description": "<p>Veinær stasjon på fortau i Åkebergveien i nærheten av krysset Åkebergveien/Grønlandsleiret.</p><p>Stasjonen måler PM10 og NO2. Stasjonen driftes på helårig basis.</p>",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "Manglerud",
+    "eoi": "NO0071A",
+    "description": "<p>Ved E6 på Manglerud. Operativ hele året. Måler:</p>- Svevestøv (PM10 og PM2.5)<br />- Nitrogenoksider (NOx)<br /><p>Samtlige parametre måles og rapporteres kontinuerlig online.</p>",
+    "owner": "Statens Vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Smestad",
+    "eoi": "NO0095A",
+    "description": "<p>Ved Ring 3 på Smestad. Måler:</p>- Svevestøv (PM10 og PM2.5) <br />- Nitrogenoksider (NOx)<br />- Benzen<br /><p>Benzen analyseres i lab og rapporteres årlig. Øvrige parametre måles og rapporteres kontinuerlig online. Fra og med 2014 er stasjonen i drift hele året.</p>",
+    "owner": "Statens vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Rv 4, Aker sykehus",
+    "eoi": "NO0101A",
+    "description": "<p>Ved Rv4 nær Aker Sykehus og Sinsenkrysset. Måler:</p>- Svevestøv (PM10 og PM2,5)<br />- Nitrogenoksider (NOx)<br /><p>Samtlige parametre måles og rapporteres kontinuerlig online.</p><p>Fra og med 2014 er stasjonen i drift hele året.</p>",
+    "owner": "Statens vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Hjortnes",
+    "eoi": "NO0093A",
+    "description": "<p>Ved E18 på Hjortnes. Operativ hele året. Måler:</p>- Svevestøv (PM10 og PM2.5)<br />- Nitrogenoksider (NOx)<br />- Polyaromatiske hydrokarboner (PAH)<br /><p>PAH analyseres i lab og rapporteres årlig. Øvrige parametre måles og rapporteres kontinuerlig online.</p>",
+    "owner": "Statens vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Kirkeveien",
+    "eoi": "NO0011A",
+    "description": "<p>Ved Kirkeveien (Ring 2) på Marienlyst. Operativ hele året. Måler:</p>- Svevestøv (PM10 og PM2.5)<br />- Nitrogenoksider (NOx)<br />- CO<br />- Benzen<br /><p>Benzen analyseres i lab og rapporteres årlig. Øvrige parametre måles og rapporteres kontinuerlig online.</p>",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "Alnabru",
+    "eoi": "NO0057A",
+    "description": "Ved Tittutgrenda på Alnabru er det plassert en gatestasjon ved Strømsveien. Her måles PM10, PM2.5 og nitrogenoksider. Stasjonen driftes på helårig basis. Bymiljøetaten i Oslo kommune bekoster disse målingene.",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "area": "Oslo",
+    "station": "Sofienbergparken",
+    "description": "<p>Bybakgrunn 4 meter over bakkenivå ved miljøstasjonen i Sofienbergparken. Her måles det PM10, PM2.5, PM1 og PAH. Kildene er vedfyring og til dels veitrafikk. Stasjonen driftes på helårig basis.</p><p>På fine sommerdager kan målingene påvirkes av grilling i parken.</p>",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "E6 Alna senter",
+    "eoi": "NO0122A",
+    "description": "Ved E6 Alna senter. Stasjonær stasjon, operativ hele året. Måler: Svevestøv (PM10 og PM2,5). Nitrogenoksider (NOx). Samtlige parametere måles og rapporteres kontinuerlig online.",
+    "owner": "Statens Vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Skøyen",
+    "eoi": "NO0072A",
+    "description": "Bybakgrunn 4 meter over bakkenivå i park ved Drammensveien. Her måles det PM10. Stasjonen driftes på helårsbasis.",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "Grimmerhaugen",
+    "eoi": "NO0070A",
+    "description": "Stasjonen står på Grimmerhaugen mellom bygningene til Ålesund museum. Den måler bybakgrunnsnivået. Stasjonen ble satt i drift 2. mai 2004.",
+    "owner": "Ålesund kommune",
+    "county": "Møre og Romsdal"
+  },
+  {
+    "station": "Stener Heyerdahl",
+    "eoi": "NO0063A",
+    "description": "Stasjonen måler luftkvaliteten i et byområde der lufta kan være noe forurenset. Som bildet viser står stasjonenen inni den lave trebygningen. Luftprøven hentes ned over tak.",
+    "owner": "Kristiansand kommune",
+    "county": "Vest-Agder"
+  },
+  {
+    "station": "Rambergan",
+    "eoi": "NO0124A",
+    "description": "",
+    "owner": "",
+    "county": "Troms"
+  },
+  {
+    "station": "Svanvik",
+    "eoi": "NO0047R",
+    "description": "<p>Svanvik ligger 8 km vest for smelteverket i Nikel i Russland. Stasjonen måler SO2 i luft, tungmetaller i luft og nedbør samt meteorologi.</p><p>Konsentrasjonene av SO2 er vanligvis lave (nær bakgrunnsnivå). Kun når vinden bringer røyken fra smelteverket i Russland vestover måles det forhøyede og svært kortvarige konsentrasjoner.</p><p>Målingene er finansiert av Miljødirektoratet.</p>",
+    "owner": "NILU",
+    "county": "Finnmark"
+  },
+  {
+    "station": "Karpdalen",
+    "eoi": "NO0094A",
+    "description": "<p>Stasjonen ligger i Karpdalen, øst for Kirkenes, nord for smelteverket i Nikel og nord-øst for briketteringsanlegget i Zapoljarnij, Russland.</p><p>Dette er en ”gammel” stasjon som ble nedlagt i 1999 og gjenåpnet i 2008. Stasjonen måler SO2 i luft, tungmetaller i luft og nedbør samt meteorologi.</p><p>Om vinteren er hyppigst forekommende vindretning fra sør og sør-øst. Da bringes utslippene fra russisk side nordover mot Karpdalen og Jarfjordfjellet.</p>",
+    "owner": "NILU",
+    "county": "Finnmark"
+  },
+  {
+    "station": "Schancheholen",
+    "eoi": null,
+    "description": "",
+    "owner": "",
+    "county": "Rogaland"
+  },
+  {
+    "station": "Solheim",
+    "eoi": null,
+    "description": "<p>Mobil målestasjon plassert ved Rv.159 ved Solheim. Stasjonen er operativ hele året.</p><p>Måler: Svevestøv (PM10 og PM2,5) og nitrogenoksider (NOx).</p><p>Samtlige parametere måles og rapporteres kontinuerlig online.</p>",
+    "owner": "Statens Vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Bakke kirke",
+    "eoi": "NO0068A",
+    "description": "Bakke kirke",
+    "owner": "Statens Vegvesen",
+    "county": "Sør-Trøndelag"
+  },
+  {
+    "station": "Hansjordnesbukta",
+    "eoi": "NO0079A",
+    "description": "",
+    "owner": "",
+    "county": "Troms"
+  },
+  {
+    "station": "Karl Eriksens plass",
+    "eoi": "NO0116A",
+    "description": "Denne stasjonen står rett ved Rådhuset og måler luftkvaliteten slik den er ved en trafikkert veg.",
+    "owner": "Ålesund kommune",
+    "county": "Møre og Romsdal"
+  },
+  {
+    "station": "Alvim",
+    "eoi": "NO0110A",
+    "description": "",
+    "owner": "<p>Alvim er en veirelatert målestasjon. Her måles nitrogendioksid, NO2, og svevestøv, PM10 og PM2,5.</p><p>Stasjonen er plassert nær Fv.109 og E6.</p>",
+    "county": "Østfold"
+  },
+  {
+    "station": "Elgeseter",
+    "eoi": "NO0060A",
+    "description": "<p>Stasjonen ligger like inntil Elgesetergate sør for sentrum (Årsdøgntrafikk ca. 20.500 biler).</p><p>Her måles nitrogenoksider (NOx, dvs. NO og NO2) og svevestøv (PM10 og PM2.5).</p>",
+    "owner": "Statens veivesen",
+    "county": "Trøndelag"
+  },
+  {
+    "station": "E6-Tiller",
+    "eoi": "NO0102A",
+    "description": "Trafikknær stasjon ved E6. Her måles støv (PM10 og PM2.5) og nitrogendioksyd (NO2).",
+    "owner": "Trondheim Kommune",
+    "county": "Trøndelag"
+  },
+  {
+    "station": "Bygdøy Alle",
+    "eoi": "NO0083A",
+    "description": "<p>Veinær stasjon på fortau utenfor Bygdøy Allé nr 77. Stasjonen måler PM10, PM2.5 og NO2. Stasjonen driftes på helårig basis.</p>",
+    "owner": "Oslo kommune",
+    "county": "Akershus"
+  },
+  {
+    "station": "Torvet",
+    "eoi": "NO0089A",
+    "description": "<p>Stasjonen er en bybakgrunnsstasjon lokalisert 15 meter over bakkenivå ved Torvet, Trondheim sentrum (Kongens gt. 9). Kongens gt. (inntil bygget) er i alle hovedsak trafikkert av busser.</p><p>NO2 måles strekningsbasert (335 meter) mellom Brannstasjonen og Torvet.</p>",
+    "owner": "Trondheim kommune",
+    "county": "Trøndelag"
+  },
+  {
+    "station": "Våland",
+    "eoi": "NO0065A",
+    "description": "<p>Målestasjonen i Våland er en bybakgrunns stasjon som ikke direkte eksponeres for eksos og veistøv og representerer luftkvaliteten som befolkningen i allmenheten utsettes for. Her måles PM10, PM2,5, NOx, NO og NO2.</p>",
+    "owner": "Stavanger kommune",
+    "county": "Rogaland"
+  },
+  {
+    "area": "Lørenskog",
+    "station": "Solheim",
+    "eoi": null,
+    "description": "<p>Mobil målestasjon plassert ved Rv.159 ved Solheim. Stasjonen er operativ hele året. Måler: Svevestøv (PM10 og PM2,5) og nitrogenoksider (NOx). Samtlige parametere måles og rapporteres kontinuerlig online.</p>",
+    "owner": "Statens Vegvesen",
+    "county": "Akershus"
+  },
+  {
+    "station": "Sandve",
+    "eoi": "NO0052R",
+    "description": "Stasjonen ligger på sørvestspissen av Karmøy. Denne stasjonen er spesielt egnet for å fange opp episoder med luftforurensninger som stammer fra kontinentet og de britiske øyer.",
+    "owner": "NILU",
+    "county": "Rogaland"
+  },
+  {
+    "station": "Prestebakke",
+    "eoi": "NO0043R",
+    "description": "Prestebakke er en regional bakgrunnsstasjon, som ligger ca 25 km sør for Halden. Stasjonen er en del av det norske overvåknings-programmet for skogskader, og er spesielt egnet til å fange opp ozonepisoder som skyldes langtransporterte luftforurensninger fra kontinentet til sørøst-Norge.",
+    "owner": "NILU",
+    "county": "Østfold"
+  },
+  {
+    "station": "Tustervatn",
+    "eoi": "NO0015R",
+    "description": "<p>Stasjonen ligger ca 30 km øst for Mosjøen og er en regional bakgrunnsstasjon langt unna større utslippskilder Her måles ozon og hovedkomponenter i luft og nedbør.</p><p>Stasjonen er del av det europeiske overvåkningsprogrammet EMEP under langtransportkonvensjonen (CLTRAP).</p>",
+    "owner": "NILU",
+    "county": "Nordland"
+  }
+]

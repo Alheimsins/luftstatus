@@ -8,7 +8,7 @@ import getData from '../lib/get-data'
 const { publicRuntimeConfig: { TOKEN, URL_STATIONS } } = getConfig()
 
 const InfoBox = () => (
-  <div className='info-box'>
+  <div className='info-box' style={{ zIndex: 2000 }} >
     <div style={{ textAlign: 'left' }}>
       <FaCircle className='faa-pulse animated-hover' style={{ color: '#990099', border: '1px #dddddd solid', borderRadius: '10px' }} /> Svært høy<br />
       <FaCircle className='faa-pulse animated-hover' style={{ color: '#ff0000', border: '1px #dddddd solid', borderRadius: '10px' }} /> Høy<br />

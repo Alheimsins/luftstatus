@@ -80,7 +80,8 @@
     "station": "Leiret",
     "eoi": "NO0119A",
     "description": "",
-    "owner": ""
+    "owner": "",
+    "county": "Hedmark"
   },
   {
     "station": "St.Croix",

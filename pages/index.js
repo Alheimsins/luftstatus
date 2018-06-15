@@ -1,12 +1,10 @@
 import { Fragment, Component } from 'react'
 import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
-import { Layout, Field, InputText, Loading, Link } from '../components/alheimsins'
+import { Layout, Loading, Link } from '../components/alheimsins'
+import getConfig from 'next/config'
 import getData from '../lib/get-data-areas'
-
-/* { coords && coords.latitude && <p>Your position: {coords.latitude} - {coords.longitude}</p> }
-  <div><Field name='Søk'><InputText name='search' value={searchQuery} onChange={this.search} /></Field></div><div />
-*/
+const { publicRuntimeConfig: { URL_AREAS } } = getConfig()
 
 const ColorDescription = () => (
   <span style={{ textAlign: 'left' }}>
@@ -22,28 +20,20 @@ class Index extends Component {
   constructor (props) {
     super(props)
     this.state = {}
-    this.search = this.search.bind(this)
   }
 
   async componentDidMount () {
     try {
-      const { areas: data } = await getData()
+      const { areas: data } = await getData(URL_AREAS)
       this.setState({ data, error: false })
     } catch (error) {
       this.setState({ error: error.message })
     }
   }
 
-  search ({ target }) {
-    const searchQuery = target.value
-    const { data } = this.state
-    const res = data.filter(item => item.area.includes(searchQuery) || item.municipality.includes(searchQuery) || item.station.includes(searchQuery))
-    this.setState({ searchQuery, data: res })
-  }
-
   render () {
-    const {data, error, searchQuery} = this.state
-    const {coords} = this.props
+    const { data, error } = this.state
+    // const { coords } = this.props
     return (
       <Layout title='luftstatus.no - Se forurensning og luftkvalitet nær deg.'>
         <h1>Luftforurensning nå</h1>
@@ -58,7 +48,7 @@ class Index extends Component {
                   <Fragment key={i}>
                     <div>
                       <FaCircle style={{ color: `${item.color}`, border: '1px #dddddd solid', borderRadius: '10px', marginRight: '10px' }} />
-                      <Link route='sone' params={{id: item.area}}><a>{item.area}</a></Link>
+                      <Link route='sone' params={{id: item.municipality.toLowerCase()}}><a>{item.municipality}</a></Link>
                     </div>
                   </Fragment>)
                 : <Loading />

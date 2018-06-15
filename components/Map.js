@@ -5,7 +5,7 @@ import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { FaCircle } from 'react-icons/lib/fa'
 import getData from '../lib/get-data'
 
-const { publicRuntimeConfig: { TOKEN } } = getConfig()
+const { publicRuntimeConfig: { TOKEN, URL_STATIONS } } = getConfig()
 
 const InfoBox = () => (
   <div className='info-box'>
@@ -74,7 +74,7 @@ class Map extends Component {
     this.resize()
     this.interval = setInterval(() => this.tick(), 30000)
     try {
-      const { stations: data } = await getData()
+      const { stations: data } = await getData(URL_STATIONS)
       this.setState({ data, error: false })
     } catch (error) {
       console.log(error)
@@ -126,7 +126,7 @@ class Map extends Component {
           <div style={{ color: '#333333', fontSize: '12px', textAlign: 'left' }}>
             {
               components && components.map(item =>
-                <Fragment><FaCircle key={item.station + item.component} style={{ color: item.color }} /> {item.component}: {item.value.toFixed(2)} {item.unit}<br /></Fragment>
+                <Fragment key={item.station + item.component}><FaCircle style={{ color: item.color }} /> {item.component}: {item.value.toFixed(2)} {item.unit}<br /></Fragment>
               )
             }
           </div>

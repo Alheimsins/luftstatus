@@ -2,7 +2,7 @@ import { Component, Fragment } from 'react'
 import getConfig from 'next/config'
 import { Link } from '../components/alheimsins'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
-import { FaCircle } from 'react-icons/lib/fa'
+import { FaCircle, FaInfoCircle } from 'react-icons/lib/fa'
 import stylesheet from 'mapbox-gl/dist/mapbox-gl.css'
 import getData from '../lib/get-data'
 
@@ -164,7 +164,7 @@ export default class Map extends Component {
                 </Fragment>
               )
             }
-            { eoi && <div style={{ textAlign: 'right' }}><br/><Link route='stasjon' params={{id: eoi}}><a>MER INFO</a></Link></div> }
+            { eoi && <div style={{ textAlign: 'right' }}><br /><Link route='stasjon' params={{id: eoi}}><a><FaInfoCircle style={{ color: '#000000' }} /> MER INFO</a></Link></div> }
           </div>
         </div>
       </Popup>

@@ -1,4 +1,3 @@
-import { geolocated } from 'react-geolocated'
 import { Component, Fragment } from 'react'
 import getConfig from 'next/config'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
@@ -51,7 +50,7 @@ const Markers = ({ popupInfo, data }) => {
   )
 }
 
-class Map extends Component {
+export default class Map extends Component {
   constructor (props) {
     super(props)
     const latitude = props.coords && props.coords.latitude ? props.coords.latitude : 62.6321649
@@ -85,7 +84,7 @@ class Map extends Component {
 
   async tick () {
     try {
-      const { stations: data } = await getData()
+      const { stations: data } = await getData(URL_STATIONS)
       this.setState({ data, error: false })
     } catch (error) {
       console.log(error)
@@ -154,10 +153,3 @@ class Map extends Component {
     )
   }
 }
-
-export default geolocated({
-  positionOptions: {
-    enableHighAccuracy: false
-  },
-  userDecisionTimeout: 5000
-})(Map)

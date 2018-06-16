@@ -18,7 +18,6 @@ export default ({ title, theme = {}, children }) => (
       <meta name='twitter:image' content='https://bigfive-test.com/static/apple-icon.png' />
       <meta name='description' content='Se forurensning og luftkvalitet nær deg.' />
       <meta name='keywords' content='forurensning luftkvalitet luft astma' />
-      <link rel='stylesheet' href='/static/font-awesome-animation.min.css' media='none' />
       <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: `{ "@context": "http://schema.org/", "@type": "WebSite", "name": "Luftstatus", "url": "https://luftstatus.no" }` }} />
       <link rel='icon' sizes='192x192' href='/static/android-icon-192x192.png' />
       <link rel='apple-touch-icon' href='/static/apple-icon-152x152.png' />
@@ -80,28 +79,6 @@ export default ({ title, theme = {}, children }) => (
         }
         .main a {
           color: #bd10e0;
-        }
-        .mapboxgl-ctrl-logo {
-          display: none !important;
-        }
-        {
-        .mapboxgl-canvas {
-          position: unset !important;
-        }
-        .overlays {
-          cursor: grab !important;
-        }
-        .mapboxgl-marker:hover {
-          cursor: pointer;
-        }
-        .mapboxgl-ctrl-bottom-right {
-          display: none;
-        }
-        .toTop {
-          z-index: 1000;
-        }
-        .mapboxgl-popup {
-          z-index: 2000;
         }
       `}
     </style>

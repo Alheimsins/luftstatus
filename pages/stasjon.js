@@ -12,10 +12,11 @@ const Station = ({ data }) => (
       {
         data.data.map((component, i) => (
           <Fragment key={i + component.component}>
-            <FaCircle className='circle' style={{ color: `${component.color}`, border: '1px #dddddd solid', borderRadius: '10px', marginRight: '10px' }} />{component.component}
+            <FaCircle className='circle' style={{ color: `${component.color}`, border: '1px #dddddd solid', borderRadius: '10px', marginRight: '10px' }} />{component.component}: {component.value.toFixed(2)} {component.unit}
           </Fragment>
         ))
       }
+      <div>time: {data.fromTime}</div>
       <style jsx>
         {`
         .grid-container {

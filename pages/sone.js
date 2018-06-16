@@ -1,10 +1,10 @@
-import { Component, Fragment } from 'react'
+import { Fragment } from 'react'
 import getData from '../lib/get-data'
 import getConfig from 'next/config'
-import { Layout, Loading } from '../components/alheimsins'
+import { Layout } from '../components/alheimsins'
 import { FaCircle } from 'react-icons/lib/fa'
 const { publicRuntimeConfig: { URL } } = getConfig()
-const capitalize = text => text.charAt(0).toUpperCase() + text.slice(1)
+const capitalize = text => text ? text.charAt(0).toUpperCase() + text.slice(1) : false
 
 const Stations = ({ data }) => (
   <div className='grid-container'>
@@ -35,41 +35,29 @@ const Stations = ({ data }) => (
   </div>
 )
 
-export default class Sone extends Component {
-  constructor (props) {
-    super(props)
-    const id = props.query && props.query.id ? props.query.id : false
-    this.state = {
-      id
+const Sone = ({ id, data, error }) => (
+  <Layout title='luftstatus.no - Se forurensning og luftkvalitet nær deg.'>
+    <h1>{ capitalize(id) }</h1>
+    {
+      data
+        ? <Stations data={data} />
+        : <div>{error}</div>
     }
-  }
+  </Layout>
+)
 
-  async componentDidMount () {
-    try {
-      const { id } = this.state
-      const { areas: data } = await getData(URL)
-      const { stations: filterStations } = data.find(item => item.municipality.toLowerCase() === id)
-      console.log(filterStations)
-      this.setState({ data: filterStations, error: false })
-    } catch (error) {
-      console.log(error)
-      this.setState({ error: error.message })
-    }
+Sone.getInitialProps = async ({ query }) => {
+  const id = query && query.id ? query.id : false
+  console.log(id)
+  let data, error
+  try {
+    const { areas } = await getData(URL)
+    const { stations } = areas.find(item => item.municipality.toLowerCase() === id)
+    data = stations
+  } catch (err) {
+    error = error.message
   }
-
-  render () {
-    const { id, data, error } = this.state
-    return (
-      <Layout title='luftstatus.no - Se forurensning og luftkvalitet nær deg.'>
-        <h1>{ capitalize(id) }</h1>
-        {
-          data
-            ? <Stations data={data} />
-            : error
-              ? <div>{error}</div>
-              : <Loading />
-        }
-      </Layout>
-    )
-  }
+  return { data, error }
 }
+
+export default Sone

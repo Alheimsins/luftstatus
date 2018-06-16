@@ -18,9 +18,7 @@ export default ({ title, theme = {}, children }) => (
       <meta name='twitter:image' content='https://bigfive-test.com/static/apple-icon.png' />
       <meta name='description' content='Se forurensning og luftkvalitet nær deg.' />
       <meta name='keywords' content='forurensning luftkvalitet luft astma' />
-      <link rel='stylesheet' href='/static/mapbox-gl.css' />
-      <link rel='stylesheet' href='/static/font-awesome-animation.min.css' />
-      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' />
+      <link rel='stylesheet' href='/static/font-awesome-animation.min.css' media='none' />
       <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: `{ "@context": "http://schema.org/", "@type": "WebSite", "name": "Luftstatus", "url": "https://luftstatus.no" }` }} />
       <link rel='icon' sizes='192x192' href='/static/android-icon-192x192.png' />
       <link rel='apple-touch-icon' href='/static/apple-icon-152x152.png' />

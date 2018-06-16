@@ -3,6 +3,7 @@ import { Component, Fragment } from 'react'
 import getConfig from 'next/config'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { FaCircle } from 'react-icons/lib/fa'
+import 'mapbox-gl/dist/mapbox-gl.css'
 import getData from '../lib/get-data'
 
 const { publicRuntimeConfig: { TOKEN, URL_STATIONS } } = getConfig()

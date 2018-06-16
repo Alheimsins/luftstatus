@@ -3,7 +3,7 @@ import { geolocated } from 'react-geolocated'
 import { FaCircle } from 'react-icons/lib/fa'
 import { Layout, Loading, Link } from '../components/alheimsins'
 import getConfig from 'next/config'
-import getData from '../lib/get-data-areas'
+import getData from '../lib/get-data'
 const { publicRuntimeConfig: { URL_AREAS } } = getConfig()
 
 const ColorDescription = () => (

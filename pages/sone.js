@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 import getData from '../lib/get-data'
 import getConfig from 'next/config'
-import { Layout } from '../components/alheimsins'
+import { Layout, Link } from '../components/alheimsins'
 import { FaCircle } from 'react-icons/lib/fa'
 const { publicRuntimeConfig: { URL } } = getConfig()
 const capitalize = text => text ? text.charAt(0).toUpperCase() + text.slice(1) : false
@@ -11,7 +11,13 @@ const Stations = ({ data }) => (
     {
       data.map((item, i) =>
         <div key={i} style={{ textAlign: 'left' }}>
-          <h2>{item.station}</h2>
+          <h2>
+            {
+              item.eoi
+                ? <Link route='stasjon' params={{ id: item.eoi }}><a>{item.station}</a></Link>
+                : item.station
+            }
+          </h2>
           {
             item.data.map((component, i) => (
               <Fragment key={i + component.component}>
@@ -48,7 +54,6 @@ const Sone = ({ id, data, error }) => (
 
 Sone.getInitialProps = async ({ query }) => {
   const id = query && query.id ? query.id : false
-  console.log(id)
   let data, error
   try {
     const { areas } = await getData(URL)

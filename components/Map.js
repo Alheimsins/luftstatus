@@ -1,5 +1,6 @@
 import { Component, Fragment } from 'react'
 import getConfig from 'next/config'
+import { Link } from '../components/alheimsins'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
 import { FaCircle } from 'react-icons/lib/fa'
 import stylesheet from 'mapbox-gl/dist/mapbox-gl.css'
@@ -74,7 +75,7 @@ const Markers = ({ popupInfo, data }) => {
   return (
     data.map((item, i) => (
       <Marker key={i} latitude={item.latitude} longitude={item.longitude} offsetLeft={-20} offsetTop={-10} captureClick={false} className={item.color !== 'FFFFFF' && item.color !== '6ee86e' ? 'toTop' : ''}>
-        <span onClick={() => popupInfo({ lat: item.latitude, long: item.longitude, title: item.station, components: item.data })}>
+        <span onClick={() => popupInfo({ lat: item.latitude, long: item.longitude, title: item.station, components: item.data, eoi: item.eoi })}>
           <FaCircle className={item.color === '990099' || item.color === 'ff0000' ? 'faa-flash animated' : 'faa-pulse animated-hover'} style={{ color: item.color }} />
         </span>
       </Marker>
@@ -129,8 +130,8 @@ export default class Map extends Component {
     clearInterval(this.interval)
   }
 
-  popupInfo ({ lat, long, title, components }) {
-    this.setState({ popupInfo: true, lat, long, title, components })
+  popupInfo ({ lat, long, title, components, eoi }) {
+    this.setState({ popupInfo: true, lat, long, title, components, eoi })
   }
 
   resize () {
@@ -144,7 +145,7 @@ export default class Map extends Component {
   }
 
   renderPopup () {
-    const { popupInfo, lat, long, title, components } = this.state
+    const { popupInfo, lat, long, title, components, eoi } = this.state
     return popupInfo && (
       <Popup tipSize={5}
         anchor='top'
@@ -158,9 +159,12 @@ export default class Map extends Component {
           <div style={{ color: '#333333', fontSize: '12px', textAlign: 'left' }}>
             {
               components && components.map(item =>
-                <Fragment key={item.station + item.component}><FaCircle style={{ color: item.color }} /> {item.component}: {item.value.toFixed(2)} {item.unit}<br /></Fragment>
+                <Fragment key={item.station + item.component}>
+                  <FaCircle style={{ color: item.color }} /> {item.component}: {item.value.toFixed(2)} {item.unit}<br />
+                </Fragment>
               )
             }
+            { eoi && <div style={{ textAlign: 'right' }}><br/><Link route='stasjon' params={{id: eoi}}><a>MER INFO</a></Link></div> }
           </div>
         </div>
       </Popup>

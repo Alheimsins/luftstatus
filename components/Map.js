@@ -176,7 +176,7 @@ export default class Map extends Component {
           {...viewport}
           mapboxApiAccessToken={TOKEN}
           onViewportChange={(viewport) => this.setState({viewport})}
-          mapStyle='mapbox://styles/mapbox/dark-v9'
+          mapStyle='mapbox://styles/mapbox/dark-v9?optimize=true'
         >
           { data && <Markers popupInfo={this.popupInfo} data={data} /> }
           {this.renderPopup()}

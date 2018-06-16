@@ -15,12 +15,17 @@ export default ({ title, theme = {}, children }) => (
       <meta name='twitter:creator' content='@maccyber' />
       <meta name='twitter:title' content={title} />
       <meta name='twitter:description' content='Luftstatus' />
-      <meta name='twitter:image' content='https://bigfive-test.com/static/apple-icon.png' />
+      <meta name='twitter:image' content='https://bigfive-test.com/static/apple-touch-icon.png' />
       <meta name='description' content='Se forurensning og luftkvalitet nær deg.' />
       <meta name='keywords' content='forurensning luftkvalitet luft astma' />
       <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: `{ "@context": "http://schema.org/", "@type": "WebSite", "name": "Luftstatus", "url": "https://luftstatus.no" }` }} />
+      <link rel='apple-touch-icon' sizes='180x180' href='/static/apple-touch-icon.png' />
+      <link rel='icon' type='image/png' sizes='32x32' href='/static/favicon-32x32.png' />
+      <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon-16x16.png' />
+      <link rel='mask-icon' href='/static/safari-pinned-tab.svg' color='#47c162' />
+      <meta name='msapplication-TileColor' content='#47c162' />
+      <meta name='theme-color' content='#ffffff' />
       <link rel='icon' sizes='192x192' href='/static/android-icon-192x192.png' />
-      <link rel='apple-touch-icon' href='/static/apple-icon-152x152.png' />
       <link rel='shortcut icon' href='/static/favicon.ico' />
       <link rel='manifest' href='/static/manifest.json' />
     </Head>

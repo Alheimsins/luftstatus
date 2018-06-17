@@ -24,7 +24,6 @@ export default ({ title, theme = {}, children }) => (
       <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon-16x16.png' />
       <link rel='mask-icon' href='/static/safari-pinned-tab.svg' color='#47c162' />
       <meta name='msapplication-TileColor' content='#47c162' />
-      <meta name='theme-color' content='#ffffff' />
       <link rel='icon' sizes='192x192' href='/static/android-icon-192x192.png' />
       <link rel='shortcut icon' href='/static/favicon.ico' />
       <link rel='manifest' href='/static/manifest.json' />

@@ -3,7 +3,7 @@
  "short_name": "Luftstatus",
  "description": "Se forurensning og luftkvalitet nær deg.",
  "display": "fullscreen",
- "background_color": "#000000",
+ "background_color": "#FFFFFF",
  "theme_color": "#000000",
  "icons": [
   {

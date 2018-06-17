@@ -86,6 +86,7 @@ const Markers = ({ popupInfo, data }) => {
 export default class Map extends Component {
   constructor (props) {
     super(props)
+    const { data, error } = props
     const latitude = props.coords && props.coords.latitude ? props.coords.latitude : 62.6321649
     const longitude = props.coords && props.cords.longitude ? props.cords.longitude : 6.4374272
     this.state = {
@@ -96,7 +97,9 @@ export default class Map extends Component {
         longitude,
         zoom: 3,
         minZoom: 3
-      }
+      },
+      data,
+      error
     }
     this.resize = this.resize.bind(this)
     this.popupInfo = this.popupInfo.bind(this)
@@ -106,13 +109,6 @@ export default class Map extends Component {
     window.addEventListener('resize', this.resize)
     this.resize()
     this.interval = setInterval(() => this.tick(), 30000)
-    try {
-      const { stations: data } = await getData(URL_STATIONS)
-      this.setState({ data, error: false })
-    } catch (error) {
-      console.log(error)
-      this.setState({ error: error.message })
-    }
   }
 
   async tick () {

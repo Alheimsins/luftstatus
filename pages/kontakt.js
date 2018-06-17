@@ -2,7 +2,7 @@ import { Layout } from '../components/alheimsins'
 
 const users = [
   {
-    avatar: '/static/maccyber.png',
+    avatar: '/static/maccyber.jpg',
     name: 'Jonas Maccyber Enge',
     nick: {
       name: 'maccyber',
@@ -12,7 +12,7 @@ const users = [
     dev: true
   },
   {
-    avatar: '/static/zrrrzzt.png',
+    avatar: '/static/zrrrzzt.jpg',
     name: 'Geir Gåsodden',
     nick: {
       name: 'zrrrzzt',

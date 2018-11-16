@@ -43,7 +43,7 @@
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-icons": "3.2.2",
-    "react-map-gl": "4.0.0"
+    "react-map-gl": "4.0.1"
   },
   "devDependencies": {
     "ava": "0.25.0",

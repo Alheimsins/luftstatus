@@ -148,7 +148,7 @@ export default class Map extends Component {
         latitude={lat}
         longitude={long}
         offsetLeft={-12}
-        onClose={() => this.setState({popupInfo: false})}
+        onClose={() => this.setState({ popupInfo: false })}
       >
         <div width='240px'>
           <div style={{ fontSize: '14px', marginBottom: '3px' }}>{title.toUpperCase()}</div>
@@ -160,7 +160,7 @@ export default class Map extends Component {
                 </Fragment>
               )
             }
-            { eoi && <div style={{ textAlign: 'right' }}><br /><Link route='stasjon' params={{id: eoi}}><a><FaInfoCircle style={{ color: '#000000' }} /> MER INFO</a></Link></div> }
+            { eoi && <div style={{ textAlign: 'right' }}><br /><Link route='stasjon' params={{ id: eoi }}><a><FaInfoCircle style={{ color: '#000000' }} /> MER INFO</a></Link></div> }
           </div>
         </div>
       </Popup>
@@ -175,7 +175,7 @@ export default class Map extends Component {
         <ReactMapGL
           {...viewport}
           mapboxApiAccessToken={TOKEN}
-          onViewportChange={(viewport) => this.setState({viewport})}
+          onViewportChange={(viewport) => this.setState({ viewport })}
           mapStyle='mapbox://styles/mapbox/dark-v9?optimize=true'
         >
           { data && <Markers popupInfo={this.popupInfo} data={data} /> }

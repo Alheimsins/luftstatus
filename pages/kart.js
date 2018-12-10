@@ -1,9 +1,9 @@
 import dynamic from 'next/dynamic'
-import { Layout } from '../components/alheimsins'
+import { Layout } from '../components/alheimsins'
 import getData from '../lib/get-data'
 import getConfig from 'next/config'
 
-const { publicRuntimeConfig: { TOKEN, URL_STATIONS } } = getConfig()
+const { publicRuntimeConfig: { URL_STATIONS } } = getConfig()
 
 const Map = dynamic(import('../components/Map'), { ssr: false })
 
@@ -14,15 +14,15 @@ const Kart = (props) => (
 )
 
 Kart.getInitialProps = async () => {
-  let data, error
+  let data, err
   try {
     const { stations } = await getData(URL_STATIONS)
     data = stations
   } catch (error) {
     console.log(error)
-    error = error.message
+    err = error.message
   }
-  return { data, error }
+  return { data, err }
 }
 
 export default Kart

@@ -28,7 +28,7 @@ const Index = ({ data, error }) => (
             <Fragment key={i}>
               <div>
                 <FaCircle style={{ color: `${item.color}`, border: '1px #dddddd solid', borderRadius: '10px', marginRight: '10px' }} />
-                <Link route='sone' params={{id: item.municipality.toLowerCase()}}><a>{item.municipality}</a></Link>
+                <Link route='sone' params={{ id: item.municipality.toLowerCase() }}><a>{item.municipality}</a></Link>
               </div>
             </Fragment>
           )

@@ -39,7 +39,7 @@
     "babel-eslint": "10.0.1",
     "express": "4.16.4",
     "next": "7.0.2",
-    "next-offline": "3.3.2",
+    "next-offline": "3.3.3",
     "next-routes": "1.4.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",

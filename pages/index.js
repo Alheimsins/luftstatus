@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { FaCircle } from 'react-icons/lib/fa'
+import { FaCircle } from 'react-icons/fa'
 import { Layout, Link } from '../components/alheimsins'
 import getConfig from 'next/config'
 import getData from '../lib/get-data'

@@ -2,7 +2,7 @@ import { Component, Fragment } from 'react'
 import getConfig from 'next/config'
 import { Link } from '../components/alheimsins'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl'
-import { FaCircle, FaInfoCircle } from 'react-icons/lib/fa'
+import { FaCircle, FaInfoCircle } from 'react-icons/fa'
 import stylesheet from 'mapbox-gl/dist/mapbox-gl.css'
 import getData from '../lib/get-data'
 

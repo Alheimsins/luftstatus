@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "name": "luftstatus",
+  "alias": [
+    "luftstatus.no"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "URL": "https://api.luftstatus.no/data",
+    "URL_STATIONS": "https://api.luftstatus.no/stations",
+    "URL_AREAS": "https://api.luftstatus.no/areas",
+    "TOKEN": "@mapbox_token"
+
+  },
+  "type": "npm"
+}

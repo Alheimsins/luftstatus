@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import getData from '../lib/get-data'
 import getConfig from 'next/config'
 import { Layout } from '../components/alheimsins'
-import { FaCircle } from 'react-icons/lib/fa'
+import { FaCircle } from 'react-icons/fa'
 const { publicRuntimeConfig: { URL_STATIONS } } = getConfig()
 
 const Station = ({ data }) => (

@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import getData from '../lib/get-data'
 import getConfig from 'next/config'
 import { Layout, Link } from '../components/alheimsins'
-import { FaCircle } from 'react-icons/lib/fa'
+import { FaCircle } from 'react-icons/fa'
 const { publicRuntimeConfig: { URL } } = getConfig()
 const capitalize = text => text ? text.charAt(0).toUpperCase() + text.slice(1) : false
 
